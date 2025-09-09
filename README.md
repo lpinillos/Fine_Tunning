@@ -16,7 +16,7 @@ Este documento presenta, de forma clara y práctica, tres enfoques para adaptar 
 
 ## PEFT (Parameter-Efficient Fine-Tuning)
 
-**Qué es:** Un **marco** (umbrella) de técnicas de afinado eficiente (incluye LoRA, Prefix/Prompt Tuning, IA³, etc.) y utilidades para **inyectar**, **gestionar** y **activar/desactivar** adaptadores de forma sencilla (p. ej., la librería PEFT de Hugging Face).
+**Qué es:** Es una técnica para adaptar modelos grandes (como LLMs) a tareas específicas sin entrenar todos sus parámetros. Solo entrenas una pequeña fracción, ahorrando memoria, tiempo y costo.
 
 **Para qué sirve:**
 
