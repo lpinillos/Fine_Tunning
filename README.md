@@ -14,6 +14,23 @@ Este documento presenta, de forma clara y práctica, tres enfoques para adaptar 
 
 ---
 
+## PEFT (Parameter-Efficient Fine-Tuning)
+
+**Qué es:** Un **marco** (umbrella) de técnicas de afinado eficiente (incluye LoRA, Prefix/Prompt Tuning, IA³, etc.) y utilidades para **inyectar**, **gestionar** y **activar/desactivar** adaptadores de forma sencilla (p. ej., la librería PEFT de Hugging Face).
+
+**Para qué sirve:**
+
+* Facilita la **gestión práctica** de adapters: guardar, cargar, intercambiar y combinar según la tarea.
+* Permite **compartir** adapters sin redistribuir el modelo completo.
+* Encaja muy bien en ciclos de producto con múltiples clientes/verticales.
+
+**Cuándo usarlo:**
+
+* Cuando quieres adoptar **buenas prácticas operativas**: un **modelo base único** + **varios adapters**.
+* Cuando buscas **flexibilidad** y **mantenimiento simple** en producción.
+
+---
+
 ## LoRA (Low-Rank Adaptation)
 
 **Qué es:** Una técnica de *fine-tuning eficiente* que **congela** los pesos del modelo base y añade **adaptadores** pequeños (de “bajo rango”) en capas específicas, entrenando solo esos parámetros adicionales.
@@ -33,23 +50,6 @@ Este documento presenta, de forma clara y práctica, tres enfoques para adaptar 
 
 * Muchísimos menos parámetros entrenables → **menos VRAM** y **menor costo**.
 * Posibilidad de **mantener y versionar adapters** por tarea, sin duplicar el modelo base.
-
----
-
-## PEFT (Parameter-Efficient Fine-Tuning)
-
-**Qué es:** Un **marco** (umbrella) de técnicas de afinado eficiente (incluye LoRA, Prefix/Prompt Tuning, IA³, etc.) y utilidades para **inyectar**, **gestionar** y **activar/desactivar** adaptadores de forma sencilla (p. ej., la librería PEFT de Hugging Face).
-
-**Para qué sirve:**
-
-* Facilita la **gestión práctica** de adapters: guardar, cargar, intercambiar y combinar según la tarea.
-* Permite **compartir** adapters sin redistribuir el modelo completo.
-* Encaja muy bien en ciclos de producto con múltiples clientes/verticales.
-
-**Cuándo usarlo:**
-
-* Cuando quieres adoptar **buenas prácticas operativas**: un **modelo base único** + **varios adapters**.
-* Cuando buscas **flexibilidad** y **mantenimiento simple** en producción.
 
 ---
 
